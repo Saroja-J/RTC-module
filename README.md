@@ -23,15 +23,15 @@ In addition to real-time clock functionality, the module includes an **AT24CS01 
 
 ## 🛠️ Hardware Components
 
-| Component | Description |
-|-----------|-------------|
-| DS1307 | Real-Time Clock IC |
-| 32.768 kHz Crystal | RTC Oscillator |
-| CR2032 Battery Holder | Backup Power |
-| AT24CS01 | 1-Kbit EEPROM |
-| DS18B20 | Digital Temperature Sensor |
-| Pull-up Resistors | I²C Bus Pull-ups |
-| LED | Power Indicator |
+| Component | Description | Datasheet |
+|-----------|-------------|-----------|
+| **DS1307** | Real-Time Clock (RTC) IC with battery backup | [📄 DS1307 Datasheet](https://www.alldatasheet.com/datasheet-pdf/view/254791/MAXIM/DS1307.html) |
+| **32.768 kHz Crystal** | Provides accurate clock reference for the RTC | N/A |
+| **CR2032 Battery** | 3V Lithium Coin Cell for RTC backup power | [📄 CR2032 Datasheet](https://www.alldatasheet.com/datasheet-pdf/view/95177/SONY/CR2032.html) |
+| **AT24C32 EEPROM** | 32-Kbit I²C Serial EEPROM for non-volatile data storage | [📄 AT24C32 Datasheet](https://www.alldatasheet.com/datasheet-pdf/view/56067/ATMEL/AT24C32.html) |
+| **DS18B20** | Digital 1-Wire Temperature Sensor | [📄 DS18B20 Datasheet](https://www.alldatasheet.com/datasheet-pdf/view/1244260/MAXIM/DS18B20.html) |
+| **Pull-up Resistors** | Required for stable I²C communication | N/A |
+| **Power LED** | Indicates board power status | N/A |
 
 ---
 
@@ -45,28 +45,9 @@ In addition to real-time clock functionality, the module includes an **AT24CS01 
 
 ## 🏗️ Hardware Architecture
 
-```text
-                 +5V
-                  │
-        ┌─────────────────┐
-        │    DS1307 RTC   │
-        │                 │
-Crystal ── X1/X2          │
-Battery ── VBAT           │
-        │                 │
-        │ SDA      SCL    │
-        └────┬────────┬───┘
-             │        │
-             │        │
-      ┌───────────────┐
-      │  AT24CS01     │
-      │   EEPROM      │
-      └───────────────┘
-             │
-             │
-         ESP32 MCU
-             │
-      DS18B20 Sensor
+<img width="606" height="507" alt="Image" src="https://github.com/user-attachments/assets/518afe4d-66f1-44ed-8952-f9e1fd1b927c" />
+
+
 ```
 
 ## ⚡ Power Specifications
