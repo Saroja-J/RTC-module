@@ -38,7 +38,7 @@ In addition to real-time clock functionality, the module includes an **AT24CS01 
 ## 📷 Schematic
 
 <p align="center">
-    <img src="Images/RTC_Schematic.png" width="900">
+   <img width="1327" height="442" alt="Image" src="https://github.com/user-attachments/assets/00456204-96a5-4e44-a267-f9d02905b3d8" />
 </p>
 
 ---
@@ -68,20 +68,6 @@ Battery ── VBAT           │
              │
       DS18B20 Sensor
 ```
-
----
-
-## 🔌 Connector Pinout
-
-| Pin | Signal | Description |
-|-----|--------|-------------|
-| 1 | +5V | Power Supply |
-| 2 | Temp Sensor | DS18B20 Data |
-| 3 | RTC_SDA | I²C Data |
-| 4 | RTC_SCL | I²C Clock |
-| 5 | GND | Ground |
-
----
 
 ## ⚡ Power Specifications
 
