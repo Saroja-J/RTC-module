@@ -47,9 +47,8 @@ In addition to real-time clock functionality, the module includes an **AT24CS01 
 
 <img width="606" height="507" alt="Image" src="https://github.com/user-attachments/assets/518afe4d-66f1-44ed-8952-f9e1fd1b927c" />
 
-
 ```
-
+```
 ## ⚡ Power Specifications
 
 | Parameter | Value |
